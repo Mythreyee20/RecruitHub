@@ -100,3 +100,18 @@ a {
 a:hover {
     color: #226DB4;
 }
+
+select {
+    width: 100%;
+    padding: 12px;
+    border: 2px solid #ddd;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: border-color 0.3s;
+}
+
+select:focus {
+    outline: none;
+    border-color: #E42527;
+    box-shadow: 0 0 5px rgba(228, 37, 39, 0.2);
+}
