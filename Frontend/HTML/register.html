@@ -4,9 +4,9 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecruitHub - Register</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
+<body class="login-body">
     <div class="login-container">
         <h1>RecruitHub</h1>
         <h2>Student Registration</h2>
@@ -31,19 +31,30 @@
                 <label for="department">Department:</label>
                 <select id="department" name="department" required>
                     <option value="">Select Department</option>
+                    <option value="AIDS">Artificial Intelligence & Data Science</option>
+                    <option value="AIML">AI & Machine Learning</option>
                     <option value="CSE">Computer Science</option>
                     <option value="ECE">Electronics</option>
                     <option value="ME">Mechanical</option>
                     <option value="CE">Civil</option>
+                    <option value="IT">Information Technology</option>
+                    
                 </select>
             </div>
 
             <button type="submit" class="btn">Register</button>
         </form>
 
-        <p>Already have an account? <a href="index.html">Login here</a></p>
+        <p>Already have an account? <a href="../HTML/index.html">Login here</a></p>
+        <div id="successMessage" class="success-message">
+    Registration successful! Please login.
+</div>
+        <div id="errorMessage" class="error-message">
+    ✕ Registration failed! Email may already be registered.
+</div>
     </div>
 
-    <script src="js/script.js"></script>
+    <script src="../JS/script.js"></script>
+
 </body>
 </html>

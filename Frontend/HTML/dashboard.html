@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>RecruitHub - Dashboard</title>
+    <link rel="stylesheet" href="../CSS/style.css">
+</head>
+<body class="dashboard-body">
+
+
+<header class="dashboard-header">
+    <h1>RecruitHub</h1>
+    <button class="logout-btn" onclick="logout()">Logout</button>
+</header>
+
+<div class="dashboard-container">
+
+    <!-- Student Profile -->
+    <div class="student-card">
+        <h2>👤 Student Profile</h2>
+
+        <div class="profile-details">
+            <p><strong>Name:</strong> <span id="studentName"></span></p>
+            <p><strong>Email:</strong> <span id="studentEmail"></span></p>
+            <p><strong>Department:</strong> <span id="studentDept"></span></p>
+        </div>
+    </div>
+
+    <!-- Hero Section -->
+    <div class="hero-section">
+        <h2>Welcome to RecruitHub 👋</h2>
+        <p>Find opportunities, track applications and land your dream job.</p>
+    </div>
+
+    <!-- Stats -->
+    <div class="stats-container">
+
+        <div class="stat-card">
+            <h3>4</h3>
+            <p>Available Jobs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3 id="appliedCount">0</h3>
+            <p>Applied Jobs</p>
+        </div>
+
+        <div class="stat-card">
+            <h3>0</h3>
+            <p>Shortlisted</p>
+        </div>
+
+        <div class="stat-card">
+    <h3 id="topMatch">-</h3>
+    <p>Best Job Match</p>
+       </div>
+
+    </div>
+    <!-- RESUME UPLOAD SECTION -->
+
+<div class="resume-section">
+
+    <h2>Upload Your Resume</h2>
+
+    <p>
+        Upload your resume to get personalized job recommendations.
+    </p>
+
+    <form id="resumeForm">
+
+        <input
+            type="file"
+            id="resumeFile"
+            accept=".pdf"
+            required
+        >
+
+        <button
+            type="submit"
+            class="upload-resume-btn"
+        >
+            Upload Resume
+        </button>
+
+    </form>
+
+</div>
+
+    <!-- Applications -->
+    <div class="stat-card">
+        <h3>📋 My Applications</h3>
+        <ul id="appliedCompanies" style="margin-top:15px;"></ul>
+    </div>
+
+    <!-- Search -->
+    <div class="search-section">
+        <input type="text" id="searchInput" placeholder="🔍 Search Companies">
+    </div>
+
+    <!-- Companies -->
+    <div class="companies-section">
+        <h2>Top Companies</h2>
+        <div class="companies-grid" id="companiesGrid">
+
+    </div>
+
+</div>
+
+</div>
+
+<div id="customPopup" class="custom-popup"></div>
+<div id="withdrawModal" class="withdraw-modal">
+
+    <div class="withdraw-modal-box">
+
+        <h3>Withdraw Application?</h3>
+
+        <p>
+            Are you sure you want to withdraw this application?
+        </p>
+
+        <div class="withdraw-modal-buttons">
+
+            <button
+                class="cancel-withdraw-btn"
+                onclick="closeWithdrawModal()">
+
+                Cancel
+
+            </button>
+
+            <button
+                class="confirm-withdraw-btn"
+                onclick="confirmWithdraw()">
+
+                Yes, Withdraw
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+<div id="logoutModal" class="withdraw-modal">
+
+    <div class="withdraw-modal-box">
+
+        <h3>Logout?</h3>
+
+        <p>
+            Are you sure you want to logout?
+        </p>
+
+        <div class="withdraw-modal-buttons">
+
+            <button
+                class="cancel-withdraw-btn"
+                onclick="closeLogoutModal()">
+
+                Cancel
+
+            </button>
+
+            <button
+                class="confirm-withdraw-btn"
+                onclick="confirmLogout()">
+
+                Yes, Logout
+
+            </button>
+
+        </div>
+
+    </div>
+
+</div>
+
+<script src="../JS/script.js"></script>
+</body>
+
+
+
+</body>
+</html>

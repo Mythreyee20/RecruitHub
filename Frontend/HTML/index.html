@@ -4,17 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>RecruitHub - Login</title>
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="../CSS/style.css">
 </head>
-<body>
+<body class ="login-body">
     <div class="login-container">
         <h1>RecruitHub</h1>
         <h2>Student Login</h2>
         
         <form id="loginForm">
             <div class="form-group">
-                <label for="username">Username:</label>
-                <input type="text" id="username" name="username" required>
+                <label for="email">Email:</label>
+                <input type="email" id="email" name="email" required>
             </div>
 
             <div class="form-group">
@@ -25,9 +25,9 @@
             <button type="submit" class="btn">Login</button>
         </form>
 
-        <p>Don't have an account? <a href="register.html">Register here</a></p>
+        <p>Don't have an account? <a href="../HTML/register.html">Register here</a></p>
     </div>
-
-    <script src="js/script.js"></script>
+    <div id="customPopup" class="custom-popup"></div>
+    <script src="../JS/script.js"></script>
 </body>
 </html>
